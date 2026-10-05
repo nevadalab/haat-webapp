@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>Team registration</title>
+  <title>РЕГИСТРАЦИЯ КОМАНДЫ</title>
   <!-- Telegram WebApp SDK: provides window.Telegram.WebApp -->
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <style>
@@ -39,35 +39,35 @@
   </style>
 </head>
 <body>
-  <h1>🚀 Team registration</h1>
+  <h1>🚀 Регистрация</h1>
 
   <!-- Form fields: keep names in sync with REQUIRED_FIELDS in handlers/registration.py -->
   <form id="form" novalidate>
-    <label for="team_name">Team name *</label>
+    <label for="team_name">Название команды *</label>
     <input id="team_name" name="team_name" maxlength="100" autocomplete="off" />
     <div class="error" data-for="team_name"></div>
 
-    <label for="captain_name">Captain's full name *</label>
+    <label for="captain_name">ФИО Капитана *</label>
     <input id="captain_name" name="captain_name" maxlength="100" autocomplete="name" />
     <div class="error" data-for="captain_name"></div>
 
-    <label for="email">Contact email *</label>
+    <label for="email">Телеграм *</label>
     <input id="email" name="email" type="email" maxlength="150" autocomplete="email" />
     <div class="error" data-for="email"></div>
 
-    <label for="university">University</label>
+    <label for="university">Группа</label>
     <input id="university" name="university" maxlength="150" />
 
-    <label for="track">Track</label>
+    <label for="track">Трек</label>
     <select id="track" name="track">
       <!-- TODO: replace with the real tracks of your hackathon -->
-      <option value="general">General</option>
-      <option value="ai">AI / ML</option>
+      <option value="general">Разработка</option>
+      <!-- <option value="ai">AI / ML</option>
       <option value="web">Web / Mobile</option>
-      <option value="iot">IoT / Hardware</option>
+      <option value="iot">IoT / Hardware</option> -->
     </select>
 
-    <label for="members">Other team members (one per line)</label>
+    <label for="members">Остальные участники команды (каждый с новой строки)</label>
     <textarea id="members" name="members" maxlength="1000"></textarea>
 
     <button type="submit" id="fallback-btn">Register</button>
